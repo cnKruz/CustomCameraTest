@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NuZ-EU-lrO" userLabel="PrevieView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="380"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="474412394_870" translatesAutoresizingMaskIntoConstraints="NO" id="rem-Fr-VjJ">
+                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Tjv-go-WZI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zA-0I-HPw">
+                                <rect key="frame" x="250" y="550" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6Fm-p8-GhW"/>
+                                    <constraint firstAttribute="height" constant="50" id="Mtx-BV-nMW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="11" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Take" backgroundImage="download">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vuv-GZ-05T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NuZ-EU-lrO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AIT-fP-dzg"/>
+                            <constraint firstItem="4zA-0I-HPw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LJC-vf-fot"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rem-Fr-VjJ" secondAttribute="bottom" id="Q5P-by-DPb"/>
+                            <constraint firstAttribute="trailing" secondItem="NuZ-EU-lrO" secondAttribute="trailing" id="h3c-Tc-kWn"/>
+                            <constraint firstItem="rem-Fr-VjJ" firstAttribute="top" secondItem="NuZ-EU-lrO" secondAttribute="bottom" id="jO9-BU-vfe"/>
+                            <constraint firstItem="NuZ-EU-lrO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k9U-Bp-P6G"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4zA-0I-HPw" secondAttribute="bottom" id="s2a-uB-pLB"/>
+                            <constraint firstItem="rem-Fr-VjJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tIk-Il-1zh"/>
+                            <constraint firstAttribute="trailing" secondItem="rem-Fr-VjJ" secondAttribute="trailing" id="u5H-9h-2nm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captureImageView" destination="rem-Fr-VjJ" id="QOR-J8-BSu"/>
+                        <outlet property="previewView" destination="NuZ-EU-lrO" id="J5M-ki-euU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="474412394_870" width="800" height="574"/>
+        <image name="download" width="200" height="99"/>
+    </resources>
+</document>
